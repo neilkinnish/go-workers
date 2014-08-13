@@ -18,5 +18,10 @@ func Raise(w http.ResponseWriter, req *http.Request) {
 
   Enqueue("plan-one", "Add", []int{1, 2})
 
-  fmt.Fprintln(w, string("Raised"))
+  stats := map[string]interface{}{
+    "raised": true,
+  }
+
+  body, _ := json.MarshalIndent(stats, "", "  ")
+  fmt.Fprintln(w, string(body))
 }
