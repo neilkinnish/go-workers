@@ -18,5 +18,5 @@ func Raise(w http.ResponseWriter, req *http.Request) {
 
   Enqueue("plan-one", "Add", []int{1, 2})
 
-  fmt.Fprintln("Raised")
+  fmt.Fprintln(w, "Raised")
 }
