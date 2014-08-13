@@ -3,7 +3,6 @@ package workers
 import (
 	"encoding/json"
 	"fmt"
-	"os"
 	"net/http"
 )
 
