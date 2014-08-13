@@ -47,6 +47,7 @@ func Quit() {
 
 func StatsServer(port int) {
 	http.HandleFunc("/stats", Stats)
+	http.HandleFunc("/raise", Raise)
 
 	Logger.Println("Stats are available at", fmt.Sprint("http://localhost:", port, "/stats"))
 
